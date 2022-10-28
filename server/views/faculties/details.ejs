@@ -1,0 +1,51 @@
+<% include ../partials/header.ejs %>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <h3>Faculty Information</h3>
+
+      <br />
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Faculty ID</th>
+              <th class="text-center">Faculty Name</th>
+              <th class="text-center">Department</th>
+              <th class="text-center">Subject</th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Template Row -->
+            <tr>
+              <td><%= faculty.Facultyid %></td>
+              <td class="text-center"><%= faculty.Facultyname %></td>
+              <td class="text-center"><%= faculty.Department %></td>
+              <td class="text-center"><%= faculty.Subject %></td>
+  
+  <td class="text-center">
+ <a href="/faculties/edit/<%= faculty._id %>" class="btn btn-warning btn-sm">
+        <i class="fas fa-pencil-al"></i> Edit</a>
+        </td>
+              <td class="text-center">
+ <a href="/faculties/delete/<%= faculty._id %>" class="btn btn-warning btn-sm">
+        <i class="fas fa-trash"></i> Delete</a>
+        </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+         
+
+
+    </main>
+
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
